@@ -14,15 +14,20 @@ def sum(ary)
 
 	result = 0
 	ary.each do |n|
-
 		result = result + n
-
 	end
-
 	result
-
-
-
 end
 
+def multiply(ary)
+
+	#if ary == [] then return 0 end
+
+	result = 1
+	ary.each do |n|
+		result = result * n
+	end
+	result
+
+end
 
