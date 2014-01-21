@@ -31,3 +31,21 @@ def multiply(ary)
 
 end
 
+def factorial(num)
+
+	if num == 0
+		return 0
+	else
+		result = 1
+		while num != 0
+			result = result * num
+			num -= 1
+		end
+		result
+	end
+end
+
+
+
+
+
