@@ -32,36 +32,34 @@ def translate(word)
 
 end
 
-
-
-
-
-
-
-
 def number_of_leading_cons(word)
 	consonants = ["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z"]
 	num = 0
 
-	word.each_char do |c|
+	if word[0] + word[1] == "qu"
+	 return 2
 
-		if 	consonants.include?(c)
-			num += 1
-		else
-			return num
+	elsif (word.include?("qu") && word[0] + word[1] != "qu")
+		word.index("u") + 1
+	else
+
+		word.each_char do |c|
+
+			if 	consonants.include?(c)
+				num += 1
+			else
+				return num
+			end
+
 		end
-
 	end
-
 end
-
 
 
 def assembled_word(word, number_of_leading_cons)
 
 
 	if number_of_leading_cons == 0
-
 			# elsif vowels.include?(word[0])
 			word + "ay" #words beginning with vowels
 
