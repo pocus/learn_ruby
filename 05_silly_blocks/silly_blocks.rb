@@ -16,3 +16,10 @@ end
 def adder(num = 1)
 	yield + num
 end
+
+
+def repeater(number_of_repeats = 1)
+
+	number_of_repeats.times {yield}
+
+end
