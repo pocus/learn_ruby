@@ -44,3 +44,20 @@ class Temperature
 	end
 
 end
+
+class Celsius < Temperature
+	def initialize (value)
+		@unit = :c
+		@value = value
+	end
+end
+
+class Fahrenheit < Temperature
+	def initialize (value)
+		@unit = :f
+		@value = value
+	end
+end
+
+
+
